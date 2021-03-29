@@ -1,0 +1,11 @@
+.title, .subTitle {
+    font-family: 'Biryani', sans-serif;
+}
+
+.font-thin {
+    font-weight: lighter;
+}
+
+.font-extrabold {
+    font-weight: bolder;
+}

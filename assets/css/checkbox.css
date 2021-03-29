@@ -1,0 +1,24 @@
+.markedBox {
+    color: lightgreen;
+    font-weight: bold;
+}
+/* 
+#reu_primario_label {
+    transform: scale(1.6) !important;
+} */
+
+.result-box {
+    border: 2px solid white;
+    background: #ffffff;
+    opacity: 1;
+    font-size: 13px;
+    padding: 10px 10px 10px 10px;
+}
+
+.fadeGreen {
+    animation: fadegreen 1s;
+}
+@keyframes fadegreen {
+    from { border-color: green }
+    to   { border-color: white }
+}

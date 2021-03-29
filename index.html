@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+        <link rel="shortcut icon" href="assets/imgs/favicon.png" >
+
+        <link href="assets/css/base.css" rel="stylesheet">
+        <link href="assets/css/checkbox.css" rel="stylesheet">
+        <link href="assets/css/fontcontrol.css" rel="stylesheet">
+
+        <title>Metrópole - Calculadora Penal</title>
+    </head>
+
+    <body onload="initSmooth()">
+        <section id="presentation" class="fullpage col-12 p-0">
+            <div class="fullpage-image"></div>
+            <div class="text-content">
+                <h1 class="versionControl font-extrabold">Calculadora Penal ($version)</h1>
+                <h2 class="font-thin">Polícia Militar do Estado de São Paulo</h2>
+            </div>
+        </section>
+        <section class="col-12 m-0 mt-5 row p-0">
+            <section id="itemList" class="col-md-8 col-sm-12 w-auto"></section>
+
+
+            <section id="calculadora" class="col-md-4 col-sm-12 h-50 w-100 p-0 m-0">
+                <form id="calculadora-bg" class="bg-primary m-0 mr-md-5">
+                    <div class="d-flex flex-wrap justify-content-center text-sm-center text-md-left mx-sm-5 mx-md-0 p-5">
+                        <label class="result mr-2">Meses de Prisão: <input tabindex="5" class="result-box" id="user-pena" type="text" disabled placeholder="Selecione as ocorrências"></label>
+                        <label class="result mr-2">Qntd. em Multas: <input tabindex="6" class="result-box" id="user-fines" type="text" disabled placeholder="Selecione as ocorrências"></label>
+                        <label class="result mr-2">Multas pendentes: <input tabindex="2" class="result-box" id="pendent-fines" type="text" placeholder="Multas do indivíduo"></label>
+                        <label class="result mr-2">Reduções de Pena (%): <input tabindex="3" class="result-box" id="pena-reducao" type="text" placeholder="Digite uma porcentagem"></label>
+                        <div class="d-none d-md-flex">
+                            <label class="result col-12">
+                                Motivos:
+                                <input tabindex="-1" id="reason-list" class="result-box custom-result-box resul-box-reasons" type="text" placeholder="Motivos selecionados">
+                                <button tabindex="4" id="copy-button" class="btn btn-dark mt-1 align-self-center" onclick="copyToClipboard('#reason-list')">Copiar</button>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+				<form id="quantity-bg" class="bg-success m-0 mr-md-5 mt-5">
+                    <div id="quantity-items" class="d-flex flex-wrap justify-content-center text-sm-center text-md-left mx-sm-5 mx-md-0 p-5">
+                        <!-- <label class="result mr-2">Quantidade de ${item.itemName}: <input tabindex="2" class="result-box" id="quantity-completeid" type="text" placeholder="Quantidade"></label> -->
+					</div>
+					<!-- <button type="button" id="atualizar" class="ml-2 mb-1 btn btn-secondary">Atualizar</button> -->
+                </form>
+            </section>
+        </section>
+
+
+<!--        BOOTSTRAP           -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+<!--        CONFIGURAÇÕES       -->
+        <script src="assets/js/configs/items.js"></script>
+
+<!--        SCRIPTS PRÓPRIOS    -->
+        <script src="assets/js/base.js"></script>
+        <script src="assets/js/renderizer.js"></script>
+        <script src="assets/js/checkbox.js"></script>
+        <script src="assets/js/scroll.js"></script>
+    </body>
+
+</html>
