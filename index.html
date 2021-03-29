@@ -13,6 +13,7 @@
         <link href="assets/css/base.css" rel="stylesheet">
         <link href="assets/css/checkbox.css" rel="stylesheet">
         <link href="assets/css/fontcontrol.css" rel="stylesheet">
+        <link href="assets/css/search.css" rel="stylesheet">
 
         <title>Metrópole - Calculadora Penal</title>
     </head>
@@ -26,7 +27,11 @@
             </div>
         </section>
         <section class="col-12 m-0 mt-5 row p-0">
-            <section id="itemList" class="col-md-8 col-sm-12 w-auto"></section>
+            <section class="col-12 mb-5 d-flex justify-content-center">
+				<input type="text" id="search-box" onkeyup="procurar()" placeholder="Procurar">
+			</section>
+			
+			<section id="itemList" class="col-md-8 col-sm-12 w-auto"></section>
 
 
             <section id="calculadora" class="col-md-4 col-sm-12 h-50 w-100 p-0 m-0">
@@ -68,6 +73,7 @@
         <script src="assets/js/renderizer.js"></script>
         <script src="assets/js/checkbox.js"></script>
         <script src="assets/js/scroll.js"></script>
+        <script src="assets/js/search.js"></script>
     </body>
 
 </html>
